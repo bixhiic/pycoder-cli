@@ -1,0 +1,3 @@
+[console_scripts]
+pycodercli = pycodercli:cli
+
