@@ -131,7 +131,7 @@ def generate(g, content):
         with open(file=filename, mode='w') as fl:
             fl.write(content)
             fl.close()
-            print('[Done] File created!')
+            print(f'[Done] File {filename} created!')
 
     elif g == 'no':
         print(f'\n\n{content}\n\n')
