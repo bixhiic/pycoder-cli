@@ -31,16 +31,8 @@ def cli( d, e, f, g):
     
 
     if e and f:
-        #Get filename
-        name = str(e).split(' ')
-        name = name[1]
-        filename = name[6:].replace("'", "")
         data = e.read().replace('\n', '~')
-        aux = [[data]]
-        aux.append(filename)
-        data += aux[-1]
         content = crypt(data, f)
-
         generate(g=g, content=content)
 
     elif d and f:
@@ -129,8 +121,9 @@ def decrypt(data, format):
 
 
 
-def generate(g, content, filename='code.txt'):
+def generate(g, content):
     if g == 'yes':
+        filename = input('Filename: ')
         with open(file=filename, mode='w') as fl:
             fl.write(content)
             fl.close()
