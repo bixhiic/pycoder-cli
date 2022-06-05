@@ -19,9 +19,9 @@ This script reads a file to convert it into a code plain text from/to the chosen
 
 Example: suppose you have a file called ‘myscript.py’ in your project.
 
-You can use -e myscript.py to encode and -f dec for decimal format. 
+You can use ```-e myscript.py``` to encode and ```-f dec``` for decimal format. 
 
-if you want to decode the text, you must use -d file and -f dec, using the format that file has  to convert to original version.
+if you want to decode the text, you must use ```-d file``` and ```-f dec```, using the format that file has  to convert to original version.
 
 
 ## License
