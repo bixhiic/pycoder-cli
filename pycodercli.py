@@ -116,6 +116,10 @@ def decrypt(data, format):
                         content += k
                         num = ""
 
+    
+    if len(content) == 0:
+        return "Something is wrong.. maybe you should check the format!"                    
+
     return content
 
 
@@ -123,12 +127,12 @@ def decrypt(data, format):
 
 def generate(g, content):
     if g == 'yes':
-        filename = input('Filename: ')
+        filename = input('\nFilename: ')
         with open(file=filename, mode='w') as fl:
             fl.write(content)
             fl.close()
-            print('[DONE] File created!')
+            print('[Done] File created!')
 
     elif g == 'no':
-        print(f'\n[CODE] \n\n{content}\n\n')
+        print(f'\n\n{content}\n\n')
         
